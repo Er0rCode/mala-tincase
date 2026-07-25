@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Clover - Interactive Web</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="desktop-bg min-vh-100 position-relative overflow-x-hidden">
+
+  <!-- ==========================================================================
+       HALAMAN 1: CLOVER POP-UP MODE (DESKTOP RETRO)
+       ========================================================================== -->
+  <div id="page1" class="page-section min-vh-100 d-flex flex-column justify-content-between">
+
+    <!-- Desktop Background Icons -->
+    <div class="desktop-icons position-absolute w-100 h-100 pointer-events-none">
+      <div class="folder-item position-absolute" style="top: 15%; left: 8%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">branding</span>
+      </div>
+      <div class="folder-item position-absolute" style="top: 10%; left: 22%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">graphics</span>
+      </div>
+      <div class="folder-item position-absolute" style="top: 20%; right: 10%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">web design</span>
+      </div>
+      <div class="folder-item position-absolute" style="bottom: 20%; left: 15%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">illustration</span>
+      </div>
+      <div class="folder-item position-absolute" style="bottom: 12%; right: 38%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">motion</span>
+      </div>
+      <div class="folder-item position-absolute" style="bottom: 14%; right: 22%;">
+        <div class="folder-icon"><i class="bi bi-folder-fill"></i></div>
+        <span class="folder-label">video editing</span>
+      </div>
+      <div class="position-absolute top-0 start-50 translate-middle-x mt-4 text-center">
+        <div class="clover-logo"><i class="bi bi-flower1"></i></div>
+      </div>
+    </div>
+
+    <!-- Main Pop-Up Card -->
+    <main class="container my-auto position-relative z-2">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+          <div class="card retro-popup shadow-lg border-0 rounded-3 overflow-hidden">
+            <div class="card-header bg-white border-bottom-0 d-flex align-items-center justify-content-between px-3 py-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-flower1 text-pink fs-6"></i>
+                <span class="popup-title text-secondary">Your design game seems... stuck</span>
+              </div>
+              <div class="window-controls d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-win-ctrl p-0">—</button>
+                <button class="btn btn-sm btn-win-ctrl p-0">☐</button>
+                <button class="btn btn-sm btn-win-ctrl p-0">✕</button>
+              </div>
+            </div>
+            <div class="card-body p-4 p-md-5 position-relative">
+              <h5 class="fw-bold text-dark mb-4">Oops! You just stumbled into my little digital cozy corner.</h5>
+              <p class="body-text text-secondary mb-4">
+               Yay! Welcome to my tiny universe, leave your shoes at the door. Click any folder on the screen to peek inside, feel free to snoop around my digital garden and let's explore all the fun things i make! ♡
+              </p>
+              <p class="tagline-pink text-pink fst-italic mb-4">
+                Give 'Start Exploring' a little tap!
+              </p>
+              <div class="d-flex justify-content-end position-relative">
+                <a href="page2.html" class="btn btn-outline-dark btn-explore rounded-1 px-4 py-2" id="btnExplore">
+                  Start <span class="fw-bold">Exploring</span> 
+                </a>
+                <!-- Pixel Hand Pointer -->
+                <div class="pixel-pointer position-absolute">
+                  <i class="bi bi-hand-index-thumb-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Taskbar -->
+    <footer class="retro-taskbar py-2 px-3 position-relative z-3">
+      <div class="container-fluid d-flex justify-content-center align-items-center gap-3">
+        <div class="taskbar-icon"><i class="bi bi-window"></i></div>
+        <div class="taskbar-icon"><i class="bi bi-search"></i></div>
+        <div class="taskbar-icon"><i class="bi bi-folder"></i></div>
+        <div class="taskbar-icon"><i class="bi bi-edge"></i></div>
+        <div class="taskbar-icon"><i class="bi bi-chat-dots"></i></div>
+        <div class="taskbar-icon"><i class="bi bi-gear"></i></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
