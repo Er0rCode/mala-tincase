@@ -513,51 +513,61 @@ body {
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVE (TAMPILAN HP & TABLET)
+/* ==========================================================================
+   MOBILE RESPONSIVE (TAMPILAN HP & TABLET) - FULL CODE
    ========================================================================== */
 @media (max-width: 768px) {
   
-  /* 1. Mencegah layar bisa digeser ke kiri/kanan akibat bintang atau stiker yang meluber */
+  /* 1. Mencegah layar bergeser ke kiri/kanan akibat elemen meluber */
   body, html {
     overflow-x: hidden !important;
   }
 
-  /* 2. Menurunkan ukuran dasar UI khusus di layar kecil */
+  /* 2. Menurunkan ukuran dasar UI (teks & padding) khusus di layar kecil */
   html {
-    font-size: 75% !important; /* Turunkan angka ini jika di HP masih kebesaran */
+    font-size: 75% !important; 
   }
 
-  /* 3. Mengubah elemen yang tadinya berjejer ke samping (kiri-kanan) menjadi menumpuk atas-bawah */
+  /* 3. Menyesuaikan lebar kotak memo, foto, & postcard agar muat penuh di HP */
+/* 4. Memperbesar 2 Gambar Utama (Spotify & Foto Kolase) di HP */
+  .kertas-melayang, 
+  .kertas-foto, 
+  .postcard {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+    /* Menghilangkan efek miring bawaan agar gambarnya bisa tampil lebih besar dan rapi di layar sempit */
+    transform: none !important; 
+  }
+
+  /* 4. PERBAIKAN PAGE 3: Memastikan wadah bawah bisa membungkus gambar dengan rapi */
   .tin-compartment {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: row !important; /* Tetap berjejer ke samping */
+    flex-wrap: wrap !important;     /* Otomatis turun ke bawah jika layar sempit */
+    justify-content: center !important; 
+    gap: 15px !important;           /* Memberi jarak aman antar gambar */
     padding: 15px !important;
   }
 
-  /* 4. Menyesuaikan kotak memo & postcard agar muat di layar HP */
-  .kertas-melayang, .postcard {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* 5. PERBAIKAN PAGE 3: Mematikan posisi absolute agar gambar (lipstik, matcha, airpods) tidak numpuk */
+  .tin-compartment .judy-standee,
+  .tin-compartment .airpod,
+  .tin-compartment img {
+    position: relative !important;  
+    top: 0 !important;
+    left: 0 !important;
+    margin: 5px auto !important;    
+    transform: none !important;     /* Mematikan efek miring/rotasi bawaan di HP agar rapi */
   }
 
-  /* 5. Mengatur ulang ukuran gambar Judy Hopps agar tidak saling menimpa saat ditumpuk ke bawah */
-  .judy-standee {
-    transform: scale(1.1) rotate(0deg) !important;
-    margin-top: 10px;
-    top: 0 !important; /* Membatalkan efek terangkat sebelumnya di layar kecil */
-  }
-
-  .judy-standee:hover {
-    transform: scale(1.2) translateY(-3px) !important;
-  }
-
-  /* 6. Memastikan kumpulan gambar Judy di Halaman 3 rapi */
-  .tin-compartment .d-flex {
-    flex-direction: row !important; /* Tetap berjejer ke samping, tapi dikecilkan */
-    flex-wrap: wrap;
-    justify-content: center !important;
-    margin-top: 15px;
+  /* 6. Memastikan efek membesar saat disentuh (hover) tetap berjalan di HP */
+  .tin-compartment .judy-standee:hover,
+  .tin-compartment .airpod:hover,
+  .tin-compartment img:hover {
+    transform: scale(1.1) !important;
   }
 }
 
