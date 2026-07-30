@@ -561,7 +561,3 @@ body {
   }
 }
 
-/* Memberikan ruang kosong di dasar halaman agar tombol tidak tertutup pita */
-body {
-  padding-bottom: 100px !important; 
-}
