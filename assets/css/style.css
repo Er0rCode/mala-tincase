@@ -385,7 +385,7 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 18s linear infinite;
+  animation: marquee-scroll 25s linear infinite;
 }
 
 .marquee-group {
@@ -420,7 +420,7 @@ body {
    ANIMASI TAMBAHAN
    ========================================================================== */
 .ribbon-sway {
-  animation: sway 4s infinite ease-in-out alternate;
+  animation: sway 5s infinite ease-in-out alternate;
 }
 @keyframes sway {
   0% { transform: translateY(0) rotate(-15deg); }
