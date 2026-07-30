@@ -385,7 +385,7 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 25s linear infinite;
+  animation: marquee-scroll 5s linear infinite;
 }
 
 .marquee-group {
