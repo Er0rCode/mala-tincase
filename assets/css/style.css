@@ -17,6 +17,8 @@ body {
   color: #2b2b2b;
 }
 
+
+
 /* Page fade-in on load (each page is now its own HTML file) */
 .page-section {
   opacity: 0;
@@ -508,4 +510,58 @@ body {
   /* Saat mouse diarahkan, ukurannya naik sedikit lagi jadi 1.55 */
   transform: scale(3.2) rotate(2deg) translateY(-5px); 
   filter: drop-shadow(8px 12px 15px rgba(0, 0, 0, 0.5));
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE (TAMPILAN HP & TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Mencegah layar bisa digeser ke kiri/kanan akibat bintang atau stiker yang meluber */
+  body, html {
+    overflow-x: hidden !important;
+  }
+
+  /* 2. Menurunkan ukuran dasar UI khusus di layar kecil */
+  html {
+    font-size: 75% !important; /* Turunkan angka ini jika di HP masih kebesaran */
+  }
+
+  /* 3. Mengubah elemen yang tadinya berjejer ke samping (kiri-kanan) menjadi menumpuk atas-bawah */
+  .tin-compartment {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 15px !important;
+  }
+
+  /* 4. Menyesuaikan kotak memo & postcard agar muat di layar HP */
+  .kertas-melayang, .postcard {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 5. Mengatur ulang ukuran gambar Judy Hopps agar tidak saling menimpa saat ditumpuk ke bawah */
+  .judy-standee {
+    transform: scale(1.1) rotate(0deg) !important;
+    margin-top: 10px;
+    top: 0 !important; /* Membatalkan efek terangkat sebelumnya di layar kecil */
+  }
+
+  .judy-standee:hover {
+    transform: scale(1.2) translateY(-3px) !important;
+  }
+
+  /* 6. Memastikan kumpulan gambar Judy di Halaman 3 rapi */
+  .tin-compartment .d-flex {
+    flex-direction: row !important; /* Tetap berjejer ke samping, tapi dikecilkan */
+    flex-wrap: wrap;
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+}
+
+/* Memberikan ruang kosong di dasar halaman agar tombol tidak tertutup pita */
+body {
+  padding-bottom: 100px !important; 
 }
